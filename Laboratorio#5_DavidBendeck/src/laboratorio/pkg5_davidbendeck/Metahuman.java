@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author davidbendeck
  */
-public class Metahuman {
+public abstract class Metahuman {
     
     protected ArrayList<Superpoder> superpoderes = new ArrayList<>();
     protected String nombre;
