@@ -20,9 +20,9 @@ public class Superheroe  extends Metahuman {
         this.villanosAtrapados = villanosAtrapados;
     }
 
-    public Superheroe(int villanosAtrapados, String nombre, int edad, String palnetaOrigen, int altura) {
+    public Superheroe(String nombre, int edad, String palnetaOrigen, int altura) {
         super(nombre, edad, palnetaOrigen, altura);
-        this.villanosAtrapados = villanosAtrapados;
+        this.villanosAtrapados = 0;
     }
 
     public int getVillanosAtrapados() {

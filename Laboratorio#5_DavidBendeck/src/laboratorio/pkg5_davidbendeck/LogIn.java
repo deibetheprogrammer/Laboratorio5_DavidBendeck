@@ -5,6 +5,8 @@
  */
 package laboratorio.pkg5_davidbendeck;
 
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +19,9 @@ public class LogIn extends javax.swing.JFrame {
      * Creates new form LogIn
      */
     public LogIn() {
+        
         initComponents();
+        
     }
 
     /**
@@ -30,6 +34,66 @@ public class LogIn extends javax.swing.JFrame {
     private void initComponents() {
 
         D_SimuladorMHA = new javax.swing.JDialog();
+        TP_SimuladorMHA = new javax.swing.JTabbedPane();
+        P_AgregarSuperpoderes = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        CB_Mortal_Superpoderes = new javax.swing.JComboBox<>();
+        CB_PowerLevel_Superpoderes = new javax.swing.JComboBox<>();
+        B_Agregar_Superpoderes = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        L_Superpoderes_Superpoderes = new javax.swing.JList<>();
+        TF_Descripcion_Superpoderes = new javax.swing.JTextField();
+        P_Superheroes = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        TF_Nombre_Superheroe = new javax.swing.JTextField();
+        TF_Edad_Superheroe = new javax.swing.JTextField();
+        TF_Planeta_Superheroe = new javax.swing.JTextField();
+        TF_Altura_Superheroe = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        L_Superheroes_Superheroes = new javax.swing.JList<>();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        L_Superpoderes_Superheroes = new javax.swing.JList<>();
+        B_Agregar_Superheroe = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        CB_Equipo_Superheroe = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        TF_Nombre_Villano = new javax.swing.JTextField();
+        TF_Edad_Villano = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        L_Superpoderes_Villanos = new javax.swing.JList<>();
+        TF_Planeta_Villano = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        TF_Altura_Villano = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        L_Villanos_Villanos = new javax.swing.JList<>();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        TF_MuertesCausadas_Villano = new javax.swing.JTextField();
+        B_Agregar_Villano = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        CB_Equipo_Villano = new javax.swing.JComboBox<>();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        L_Superheroes_Metahumanos = new javax.swing.JList<>();
+        jLabel23 = new javax.swing.JLabel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        L_Villanos_Metahumanos = new javax.swing.JList<>();
+        jLabel24 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         TF_Password = new javax.swing.JTextField();
@@ -38,15 +102,411 @@ public class LogIn extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         TF_Usuario = new javax.swing.JTextField();
 
+        TP_SimuladorMHA.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                TP_SimuladorMHAStateChanged(evt);
+            }
+        });
+
+        jLabel4.setText("Nivel de poder");
+
+        jLabel5.setText("Descripcion");
+
+        jLabel6.setText("Mortal");
+
+        CB_Mortal_Superpoderes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
+
+        CB_PowerLevel_Superpoderes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+
+        B_Agregar_Superpoderes.setText("Agregar superpoder");
+        B_Agregar_Superpoderes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B_Agregar_SuperpoderesMouseClicked(evt);
+            }
+        });
+
+        jLabel14.setText("Superpoderes");
+
+        L_Superpoderes_Superpoderes.setModel(new DefaultListModel()
+        );
+        jScrollPane2.setViewportView(L_Superpoderes_Superpoderes);
+
+        javax.swing.GroupLayout P_AgregarSuperpoderesLayout = new javax.swing.GroupLayout(P_AgregarSuperpoderes);
+        P_AgregarSuperpoderes.setLayout(P_AgregarSuperpoderesLayout);
+        P_AgregarSuperpoderesLayout.setHorizontalGroup(
+            P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_AgregarSuperpoderesLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(B_Agregar_Superpoderes)
+                    .addComponent(jLabel5)
+                    .addGroup(P_AgregarSuperpoderesLayout.createSequentialGroup()
+                        .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6))
+                        .addGap(59, 59, 59)
+                        .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CB_Mortal_Superpoderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CB_PowerLevel_Superpoderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TF_Descripcion_Superpoderes, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_AgregarSuperpoderesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(155, 155, 155))
+        );
+        P_AgregarSuperpoderesLayout.setVerticalGroup(
+            P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_AgregarSuperpoderesLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(CB_PowerLevel_Superpoderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_AgregarSuperpoderesLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(TF_Descripcion_Superpoderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(56, 56, 56)
+                        .addGroup(P_AgregarSuperpoderesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(CB_Mortal_Superpoderes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70)
+                        .addComponent(B_Agregar_Superpoderes))
+                    .addGroup(P_AgregarSuperpoderesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(175, Short.MAX_VALUE))
+        );
+
+        TP_SimuladorMHA.addTab("Agregar superpoderes", P_AgregarSuperpoderes);
+
+        P_Superheroes.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                P_SuperheroesFocusGained(evt);
+            }
+        });
+
+        jLabel8.setText("Superpoderes");
+
+        jLabel10.setText("Nombre");
+
+        jLabel11.setText("Edad");
+
+        jLabel12.setText("Planeta de origen");
+
+        jLabel13.setText("Altura");
+
+        jLabel15.setText("Superheroes");
+
+        L_Superheroes_Superheroes.setModel(new DefaultListModel()
+        );
+        jScrollPane1.setViewportView(L_Superheroes_Superheroes);
+
+        L_Superpoderes_Superheroes.setModel(new DefaultListModel()
+        );
+        jScrollPane3.setViewportView(L_Superpoderes_Superheroes);
+
+        B_Agregar_Superheroe.setText("Agregar superheroe");
+        B_Agregar_Superheroe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B_Agregar_SuperheroeMouseClicked(evt);
+            }
+        });
+
+        jLabel21.setText("Equipo");
+
+        CB_Equipo_Superheroe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "X-Men", "Avengers" }));
+
+        javax.swing.GroupLayout P_SuperheroesLayout = new javax.swing.GroupLayout(P_Superheroes);
+        P_Superheroes.setLayout(P_SuperheroesLayout);
+        P_SuperheroesLayout.setHorizontalGroup(
+            P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                                .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel10))
+                                        .addGap(50, 50, 50)
+                                        .addComponent(TF_Nombre_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane3))
+                                .addGap(0, 163, Short.MAX_VALUE))
+                            .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                                .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel13))
+                                .addGap(27, 27, 27)
+                                .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(TF_Altura_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TF_Planeta_Superheroe, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                        .addComponent(TF_Edad_Superheroe))
+                                    .addComponent(CB_Equipo_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_SuperheroesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel15)
+                                .addGap(152, 152, 152))))
+                    .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addComponent(B_Agregar_Superheroe))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        P_SuperheroesLayout.setVerticalGroup(
+            P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(P_SuperheroesLayout.createSequentialGroup()
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel8))
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(TF_Nombre_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TF_Edad_Superheroe, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(TF_Planeta_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(TF_Altura_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addGroup(P_SuperheroesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(CB_Equipo_Superheroe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addComponent(B_Agregar_Superheroe)
+                .addGap(17, 17, 17))
+        );
+
+        TP_SimuladorMHA.addTab("Agregar Superheroes", P_Superheroes);
+
+        jLabel16.setText("Planeta de origen");
+
+        jLabel17.setText("Altura");
+
+        jLabel9.setText("Superpoderes");
+
+        L_Superpoderes_Villanos.setModel(new DefaultListModel()
+        );
+        jScrollPane4.setViewportView(L_Superpoderes_Villanos);
+
+        jLabel18.setText("Nombre");
+
+        jLabel19.setText("Edad");
+
+        L_Villanos_Villanos.setModel(new DefaultListModel()
+        );
+        jScrollPane5.setViewportView(L_Villanos_Villanos);
+
+        jLabel20.setText("Villanos");
+
+        jLabel7.setText("Muertes causadas");
+
+        B_Agregar_Villano.setText("Agregar Villano");
+        B_Agregar_Villano.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B_Agregar_VillanoMouseClicked(evt);
+            }
+        });
+
+        jLabel25.setText("Equipo");
+
+        CB_Equipo_Villano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dark Avengers", "Sinister Six" }));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(B_Agregar_Villano)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel18))
+                                        .addGap(50, 50, 50)
+                                        .addComponent(TF_Nombre_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel19)
+                                        .addComponent(jLabel16)
+                                        .addComponent(jLabel17))
+                                    .addGap(27, 27, 27)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(TF_Edad_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TF_Planeta_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(TF_MuertesCausadas_Villano, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(TF_Altura_Villano, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)))))
+                            .addComponent(jLabel7))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel20)
+                                        .addGap(114, 114, 114))
+                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(76, 76, 76))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel25)
+                                .addGap(38, 38, 38)
+                                .addComponent(CB_Equipo_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel18)
+                            .addComponent(TF_Nombre_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TF_Edad_Villano, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel16)
+                            .addComponent(TF_Planeta_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel17)
+                            .addComponent(TF_Altura_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addGap(24, 24, 24)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(TF_MuertesCausadas_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25)
+                    .addComponent(CB_Equipo_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addComponent(B_Agregar_Villano)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        TP_SimuladorMHA.addTab("Agregar Supervillanos", jPanel3);
+
+        jLabel22.setText("Superheroes");
+
+        L_Superheroes_Metahumanos.setModel(new DefaultListModel());
+        jScrollPane6.setViewportView(L_Superheroes_Metahumanos);
+
+        jLabel23.setText("Villanos");
+
+        L_Villanos_Metahumanos.setModel(new DefaultListModel());
+        jScrollPane7.setViewportView(L_Villanos_Metahumanos);
+
+        jLabel24.setText("Metahumanos");
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Metahumanos");
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane9.setViewportView(jTree1);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(70, 70, 70))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(jLabel22)
+                .addGap(211, 211, 211)
+                .addComponent(jLabel23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel24)
+                .addGap(138, 138, 138))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                            .addComponent(jScrollPane7)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+
+        TP_SimuladorMHA.addTab("Arbol Metahumanos", jPanel4);
+
         javax.swing.GroupLayout D_SimuladorMHALayout = new javax.swing.GroupLayout(D_SimuladorMHA.getContentPane());
         D_SimuladorMHA.getContentPane().setLayout(D_SimuladorMHALayout);
         D_SimuladorMHALayout.setHorizontalGroup(
             D_SimuladorMHALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 708, Short.MAX_VALUE)
+            .addGroup(D_SimuladorMHALayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TP_SimuladorMHA)
+                .addContainerGap())
         );
         D_SimuladorMHALayout.setVerticalGroup(
             D_SimuladorMHALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 473, Short.MAX_VALUE)
+            .addGroup(D_SimuladorMHALayout.createSequentialGroup()
+                .addComponent(TP_SimuladorMHA, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,9 +514,9 @@ public class LogIn extends javax.swing.JFrame {
         jLabel3.setText("Contraseña");
 
         B_Entrar.setText("Entrar");
-        B_Entrar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                B_EntrarKeyPressed(evt);
+        B_Entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B_EntrarMouseClicked(evt);
             }
         });
 
@@ -123,20 +583,162 @@ public class LogIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void B_EntrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_B_EntrarKeyPressed
+    private void P_SuperheroesFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_P_SuperheroesFocusGained
         // TODO add your handling code here:
         
-        if (TF_Usuario.getText().equals(user) && TF_Password.getText().equals(password)) {
-            D_SimuladorMHA.pack();
-            D_SimuladorMHA.setModal(true);
-            D_SimuladorMHA.setVisible(true);
+    }//GEN-LAST:event_P_SuperheroesFocusGained
+
+    private void B_Agregar_SuperheroeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_Agregar_SuperheroeMouseClicked
+        // TODO add your handling code here:
+        
+        DefaultListModel modeloSuperheroes
+                = (DefaultListModel) L_Superheroes_Superheroes.getModel();
+        
+        DefaultListModel modeloHMetahumanos
+                = (DefaultListModel) L_Superheroes_Metahumanos.getModel();
+
+        DefaultListModel modeloSuperpoderes
+                = (DefaultListModel) L_Superpoderes_Superheroes.getModel();
+
+        if (L_Superpoderes_Superheroes.getSelectedIndex() >= 0) {
+            //Crear superheroe
+            Superpoder superpoder;
+            superpoder
+                    = (Superpoder) modeloSuperpoderes.get(
+                            L_Superpoderes_Superheroes.getSelectedIndex());
+
+            Superheroe hero = new Superheroe(
+                    TF_Nombre_Superheroe.getText(),
+                    Integer.parseInt(TF_Edad_Superheroe.getText()),
+                    TF_Planeta_Superheroe.getText(),
+                    Integer.parseInt(TF_Altura_Superheroe.getText()));
+
+            hero.getSuperpoderes().add(superpoder);
+
+            //Agregar a la JList superheroes (Superheroes)
+            modeloSuperheroes.addElement(hero);
+            
+            //Agregar a la JList superheroes (Metahumanos)
+            modeloHMetahumanos.addElement(hero);
+
+            //Agregar a su equipo
+            if (CB_Equipo_Superheroe.getSelectedItem().equals("X-Men")) {
+                xMen.add(hero);
+            } else {
+                avengers.add(hero);
+            }
         }
         
         else {
-            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrecto(s)");
+            JOptionPane.showMessageDialog(this, "No ha seleccionado ningún superpoder");
         }
         
-    }//GEN-LAST:event_B_EntrarKeyPressed
+    }//GEN-LAST:event_B_Agregar_SuperheroeMouseClicked
+
+    private void B_EntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_EntrarMouseClicked
+        // TODO add your handling code here:
+        
+         
+        if (TF_Usuario.getText().equals(user) && TF_Password.getText().equals(password)) {
+            D_SimuladorMHA.setVisible(true);
+            D_SimuladorMHA.pack();
+            D_SimuladorMHA.setModal(true);
+            System.out.println("lol");
+        }
+        
+        else {
+            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto(s)");
+        }
+    }//GEN-LAST:event_B_EntrarMouseClicked
+
+    private void B_Agregar_SuperpoderesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_Agregar_SuperpoderesMouseClicked
+        // TODO add your handling code here:
+        
+         DefaultListModel modeloSuperpoderes
+                = (DefaultListModel)L_Superpoderes_Superpoderes.getModel();
+        
+        boolean mortal = true;
+        
+        if (((String)CB_Mortal_Superpoderes.getSelectedItem()).equals("Si")) {
+            mortal = true;
+        } else {
+            mortal = false;
+        }
+        
+        Superpoder superpoder = new Superpoder(
+                CB_PowerLevel_Superpoderes.getSelectedIndex() + 1,
+                TF_Descripcion_Superpoderes.getText(),
+                mortal);
+        
+        modeloSuperpoderes.addElement(superpoder);
+        
+        superpoderes.add(superpoder);
+        
+        //Lista de superpoderes de los heroes actualizada
+        DefaultListModel modeloSuperpoderesHeroes
+                = (DefaultListModel) L_Superpoderes_Superheroes.getModel();
+        modeloSuperpoderesHeroes.addElement(superpoder);
+        
+        //Lista de superpoderes de los villanos actualizada
+        DefaultListModel modeloSuperpoderesVillanos
+                = (DefaultListModel) L_Superpoderes_Villanos.getModel();
+        modeloSuperpoderesVillanos.addElement(superpoder);
+        
+        TF_Descripcion_Superpoderes.setText("");
+    }//GEN-LAST:event_B_Agregar_SuperpoderesMouseClicked
+
+    private void TP_SimuladorMHAStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_TP_SimuladorMHAStateChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_TP_SimuladorMHAStateChanged
+
+    private void B_Agregar_VillanoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_Agregar_VillanoMouseClicked
+        // TODO add your handling code here:
+        
+        DefaultListModel modeloVillanos
+                = (DefaultListModel) L_Villanos_Villanos.getModel();
+        
+        DefaultListModel modeloVMetahumanos
+                = (DefaultListModel) L_Villanos_Metahumanos.getModel();
+
+        DefaultListModel modeloSuperpoderes
+                = (DefaultListModel) L_Superpoderes_Villanos.getModel();
+
+        if (L_Superpoderes_Villanos.getSelectedIndex() >= 0) {
+            //Crear superheroe
+            Superpoder superpoder;
+            superpoder
+                    = (Superpoder) modeloSuperpoderes.get(
+                            L_Superpoderes_Villanos.getSelectedIndex());
+
+            Villano villain = new Villano(
+                    Integer.parseInt(TF_MuertesCausadas_Villano.getText()),
+                    TF_Nombre_Villano.getText(),
+                    Integer.parseInt(TF_Edad_Villano.getText()),
+                    TF_Planeta_Villano.getText(),
+                    Integer.parseInt(TF_Altura_Villano.getText())
+                    );
+
+            villain.getSuperpoderes().add(superpoder);
+
+            //Agregar a la JList Villanos (Villanos)
+            modeloVillanos.addElement(villain);
+            
+            //Agregar a la JList Villanos (Metahumanos)
+            modeloVMetahumanos.addElement(villain);
+
+            //Agregar a su equipo
+            if (CB_Equipo_Villano.getSelectedItem().equals("Dark Avengers")) {
+                darkAvengers.add(villain);
+            } else {
+                SinisterSix.add(villain);
+            }
+        }
+        
+        else {
+            JOptionPane.showMessageDialog(this, "No ha seleccionado ningún superpoder");
+        }
+    }//GEN-LAST:event_B_Agregar_VillanoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -167,24 +769,96 @@ public class LogIn extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 new LogIn().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton B_Agregar_Superheroe;
+    private javax.swing.JButton B_Agregar_Superpoderes;
+    private javax.swing.JButton B_Agregar_Villano;
     private javax.swing.JButton B_Entrar;
+    private javax.swing.JComboBox<String> CB_Equipo_Superheroe;
+    private javax.swing.JComboBox<String> CB_Equipo_Villano;
+    private javax.swing.JComboBox<String> CB_Mortal_Superpoderes;
+    private javax.swing.JComboBox<String> CB_PowerLevel_Superpoderes;
     private javax.swing.JDialog D_SimuladorMHA;
+    private javax.swing.JList<String> L_Superheroes_Metahumanos;
+    private javax.swing.JList<String> L_Superheroes_Superheroes;
+    private javax.swing.JList<String> L_Superpoderes_Superheroes;
+    private javax.swing.JList<String> L_Superpoderes_Superpoderes;
+    private javax.swing.JList<String> L_Superpoderes_Villanos;
+    private javax.swing.JList<String> L_Villanos_Metahumanos;
+    private javax.swing.JList<String> L_Villanos_Villanos;
+    private javax.swing.JPanel P_AgregarSuperpoderes;
+    private javax.swing.JPanel P_Superheroes;
+    private javax.swing.JTextField TF_Altura_Superheroe;
+    private javax.swing.JTextField TF_Altura_Villano;
+    private javax.swing.JTextField TF_Descripcion_Superpoderes;
+    private javax.swing.JTextField TF_Edad_Superheroe;
+    private javax.swing.JTextField TF_Edad_Villano;
+    private javax.swing.JTextField TF_MuertesCausadas_Villano;
+    private javax.swing.JTextField TF_Nombre_Superheroe;
+    private javax.swing.JTextField TF_Nombre_Villano;
     private javax.swing.JTextField TF_Password;
+    private javax.swing.JTextField TF_Planeta_Superheroe;
+    private javax.swing.JTextField TF_Planeta_Villano;
     private javax.swing.JTextField TF_Usuario;
+    private javax.swing.JTabbedPane TP_SimuladorMHA;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
     
     String user = "stanlee";
     String password = "spiderman99";
+    
+    ArrayList<Superheroe> superheroes = new ArrayList<>();
+    ArrayList<Superheroe> xMen = new ArrayList<>();
+    ArrayList<Superheroe> avengers = new ArrayList<>();
+    
+    ArrayList<Villano> villanos = new ArrayList<>();
+    ArrayList<Villano> darkAvengers = new ArrayList<>();
+    ArrayList<Villano> SinisterSix = new ArrayList();
+    
+    ArrayList<Superpoder> superpoderes = new ArrayList<>();
     
 }

@@ -22,9 +22,8 @@ public class Villano extends Metahuman {
         this.muertesCausadas = muertesCausadas;
     }
 
-    public Villano(boolean carcel, int muertesCausadas, String nombre, int edad, String palnetaOrigen, int altura) {
+    public Villano(int muertesCausadas, String nombre, int edad, String palnetaOrigen, int altura) {
         super(nombre, edad, palnetaOrigen, altura);
-        this.carcel = carcel;
         this.muertesCausadas = muertesCausadas;
     }
 

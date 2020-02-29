@@ -5,6 +5,9 @@
  */
 package laboratorio.pkg5_davidbendeck;
 
+import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
+
 /**
  *
  * @author davidbendeck
@@ -19,7 +22,12 @@ public class Superpoder {
     }
 
     public Superpoder(int powerLevel, String descripcion, boolean mortal) {
-        this.powerLevel = powerLevel;
+        if (powerLevel > 0 && powerLevel < 11)
+            this.powerLevel = powerLevel;
+        else {
+            JOptionPane.showMessageDialog(null, "Nivel de poder invalido, default: 5");
+            this.powerLevel = 5;
+        }
         this.descripcion = descripcion;
         this.mortal = mortal;
     }
@@ -29,7 +37,12 @@ public class Superpoder {
     }
 
     public void setPowerLevel(int powerLevel) {
-        this.powerLevel = powerLevel;
+        if (powerLevel > 0 && powerLevel < 11)
+            this.powerLevel = powerLevel;
+        else {
+            JOptionPane.showMessageDialog(null, "Nivel de poder invalido, default: 5");
+            this.powerLevel = 5;
+        }
     }
 
     public String getDescripcion() {
@@ -50,7 +63,7 @@ public class Superpoder {
 
     @Override
     public String toString() {
-        return "Superpoder{" + "powerLevel=" + powerLevel + ", descripcion=" + descripcion + ", mortal=" + mortal + '}';
+        return descripcion;
     }
     
     
