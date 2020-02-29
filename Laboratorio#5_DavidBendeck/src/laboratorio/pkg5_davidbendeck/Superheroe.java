@@ -35,7 +35,7 @@ public class Superheroe  extends Metahuman {
 
     @Override
     public String toString() {
-        return "Superheroe{" + "villanosAtrapados=" + villanosAtrapados + '}';
+        return nombre;
     }
     
 }

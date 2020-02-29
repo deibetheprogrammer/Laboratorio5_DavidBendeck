@@ -45,7 +45,7 @@ public class Villano extends Metahuman {
 
     @Override
     public String toString() {
-        return "Villano{" + "carcel=" + carcel + ", muertesCausadas=" + muertesCausadas + '}';
+        return nombre;
     }
     
 }

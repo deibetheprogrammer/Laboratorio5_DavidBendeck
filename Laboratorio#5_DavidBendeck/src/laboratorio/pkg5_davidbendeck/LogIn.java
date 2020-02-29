@@ -64,7 +64,7 @@ public class LogIn extends javax.swing.JFrame {
         B_Agregar_Superheroe = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         CB_Equipo_Superheroe = new javax.swing.JComboBox<>();
-        jPanel3 = new javax.swing.JPanel();
+        P_Villanos = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -84,7 +84,7 @@ public class LogIn extends javax.swing.JFrame {
         B_Agregar_Villano = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
         CB_Equipo_Villano = new javax.swing.JComboBox<>();
-        jPanel4 = new javax.swing.JPanel();
+        P_Metahumanos = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         L_Superheroes_Metahumanos = new javax.swing.JList<>();
@@ -94,6 +94,21 @@ public class LogIn extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
+        P_AtraparVillanos = new javax.swing.JPanel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        L_Superheroes_Atrapar = new javax.swing.JList<>();
+        jLabel26 = new javax.swing.JLabel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        L_Villanos_Atrapar = new javax.swing.JList<>();
+        jLabel27 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        L_Carcel_Atrapar = new javax.swing.JList<>();
+        jLabel28 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        P_EscapeVillano = new javax.swing.JPanel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jLabel29 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         TF_Password = new javax.swing.JTextField();
@@ -342,87 +357,87 @@ public class LogIn extends javax.swing.JFrame {
 
         CB_Equipo_Villano.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dark Avengers", "Sinister Six" }));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout P_VillanosLayout = new javax.swing.GroupLayout(P_Villanos);
+        P_Villanos.setLayout(P_VillanosLayout);
+        P_VillanosLayout.setHorizontalGroup(
+            P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_VillanosLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_VillanosLayout.createSequentialGroup()
                         .addComponent(B_Agregar_Villano)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_VillanosLayout.createSequentialGroup()
+                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(P_VillanosLayout.createSequentialGroup()
+                                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel9)
                                             .addComponent(jLabel18))
                                         .addGap(50, 50, 50)
                                         .addComponent(TF_Nombre_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(P_VillanosLayout.createSequentialGroup()
+                                    .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel19)
                                         .addComponent(jLabel16)
                                         .addComponent(jLabel17))
                                     .addGap(27, 27, 27)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(TF_Edad_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(TF_Planeta_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(TF_MuertesCausadas_Villano, javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(TF_Altura_Villano, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)))))
                             .addComponent(jLabel7))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(P_VillanosLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_VillanosLayout.createSequentialGroup()
                                         .addComponent(jLabel20)
                                         .addGap(114, 114, 114))
                                     .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(76, 76, 76))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGroup(P_VillanosLayout.createSequentialGroup()
                                 .addGap(16, 16, 16)
                                 .addComponent(jLabel25)
                                 .addGap(38, 38, 38)
                                 .addComponent(CB_Equipo_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        P_VillanosLayout.setVerticalGroup(
+            P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_VillanosLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_VillanosLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addGap(10, 10, 10)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel18)
                             .addComponent(TF_Nombre_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(TF_Edad_Villano, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16)
                             .addComponent(TF_Planeta_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17)
                             .addComponent(TF_Altura_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(P_VillanosLayout.createSequentialGroup()
                         .addComponent(jLabel20)
                         .addGap(24, 24, 24)
                         .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(P_VillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(TF_MuertesCausadas_Villano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25)
@@ -432,7 +447,7 @@ public class LogIn extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        TP_SimuladorMHA.addTab("Agregar Supervillanos", jPanel3);
+        TP_SimuladorMHA.addTab("Agregar Supervillanos", P_Villanos);
 
         jLabel22.setText("Superheroes");
 
@@ -450,11 +465,11 @@ public class LogIn extends javax.swing.JFrame {
         jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane9.setViewportView(jTree1);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout P_MetahumanosLayout = new javax.swing.GroupLayout(P_Metahumanos);
+        P_Metahumanos.setLayout(P_MetahumanosLayout);
+        P_MetahumanosLayout.setHorizontalGroup(
+            P_MetahumanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_MetahumanosLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
@@ -462,7 +477,7 @@ public class LogIn extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70))
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(P_MetahumanosLayout.createSequentialGroup()
                 .addGap(78, 78, 78)
                 .addComponent(jLabel22)
                 .addGap(211, 211, 211)
@@ -471,27 +486,124 @@ public class LogIn extends javax.swing.JFrame {
                 .addComponent(jLabel24)
                 .addGap(138, 138, 138))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        P_MetahumanosLayout.setVerticalGroup(
+            P_MetahumanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_MetahumanosLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(P_MetahumanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
                     .addComponent(jLabel23)
                     .addComponent(jLabel24))
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(P_MetahumanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_MetahumanosLayout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(P_MetahumanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                             .addComponent(jScrollPane7)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(P_MetahumanosLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
 
-        TP_SimuladorMHA.addTab("Arbol Metahumanos", jPanel4);
+        TP_SimuladorMHA.addTab("Arbol Metahumanos", P_Metahumanos);
+
+        L_Superheroes_Atrapar.setModel(new DefaultListModel()
+        );
+        jScrollPane8.setViewportView(L_Superheroes_Atrapar);
+
+        jLabel26.setText("Superheroe");
+
+        L_Villanos_Atrapar.setModel(new DefaultListModel());
+        jScrollPane10.setViewportView(L_Villanos_Atrapar);
+
+        jLabel27.setText("Villano atrapado");
+
+        L_Carcel_Atrapar.setModel(new DefaultListModel()
+        );
+        jScrollPane11.setViewportView(L_Carcel_Atrapar);
+
+        jLabel28.setText("Carcel");
+
+        jButton1.setText("--->");
+
+        javax.swing.GroupLayout P_AtraparVillanosLayout = new javax.swing.GroupLayout(P_AtraparVillanos);
+        P_AtraparVillanos.setLayout(P_AtraparVillanosLayout);
+        P_AtraparVillanosLayout.setHorizontalGroup(
+            P_AtraparVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_AtraparVillanosLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jLabel26)
+                .addGap(164, 164, 164)
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel28)
+                .addGap(168, 168, 168))
+            .addGroup(P_AtraparVillanosLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85))
+        );
+        P_AtraparVillanosLayout.setVerticalGroup(
+            P_AtraparVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_AtraparVillanosLayout.createSequentialGroup()
+                .addContainerGap(121, Short.MAX_VALUE)
+                .addGroup(P_AtraparVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel28))
+                .addGroup(P_AtraparVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(P_AtraparVillanosLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(P_AtraparVillanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(P_AtraparVillanosLayout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jButton1)))
+                .addGap(191, 191, 191))
+        );
+
+        TP_SimuladorMHA.addTab("Atrapar villanos", P_AtraparVillanos);
+
+        jList1.setModel(new DefaultListModel()
+        );
+        jScrollPane12.setViewportView(jList1);
+
+        jLabel29.setText("Seleccione un villano en la carcel");
+
+        javax.swing.GroupLayout P_EscapeVillanoLayout = new javax.swing.GroupLayout(P_EscapeVillano);
+        P_EscapeVillano.setLayout(P_EscapeVillanoLayout);
+        P_EscapeVillanoLayout.setHorizontalGroup(
+            P_EscapeVillanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_EscapeVillanoLayout.createSequentialGroup()
+                .addContainerGap(378, Short.MAX_VALUE)
+                .addGroup(P_EscapeVillanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_EscapeVillanoLayout.createSequentialGroup()
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(289, 289, 289))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_EscapeVillanoLayout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addGap(330, 330, 330))))
+        );
+        P_EscapeVillanoLayout.setVerticalGroup(
+            P_EscapeVillanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(P_EscapeVillanoLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel29)
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(214, Short.MAX_VALUE))
+        );
+
+        TP_SimuladorMHA.addTab("Escape villanos", P_EscapeVillano);
 
         javax.swing.GroupLayout D_SimuladorMHALayout = new javax.swing.GroupLayout(D_SimuladorMHA.getContentPane());
         D_SimuladorMHA.getContentPane().setLayout(D_SimuladorMHALayout);
@@ -596,6 +708,9 @@ public class LogIn extends javax.swing.JFrame {
         
         DefaultListModel modeloHMetahumanos
                 = (DefaultListModel) L_Superheroes_Metahumanos.getModel();
+        
+        DefaultListModel modeloHAtrapar
+                = (DefaultListModel) L_Superheroes_Atrapar.getModel();
 
         DefaultListModel modeloSuperpoderes
                 = (DefaultListModel) L_Superpoderes_Superheroes.getModel();
@@ -620,6 +735,9 @@ public class LogIn extends javax.swing.JFrame {
             
             //Agregar a la JList superheroes (Metahumanos)
             modeloHMetahumanos.addElement(hero);
+            
+            //Agregar a la JList superheroes (atrapar)
+            modeloHAtrapar.addElement(hero);
 
             //Agregar a su equipo
             if (CB_Equipo_Superheroe.getSelectedItem().equals("X-Men")) {
@@ -700,6 +818,9 @@ public class LogIn extends javax.swing.JFrame {
         
         DefaultListModel modeloVMetahumanos
                 = (DefaultListModel) L_Villanos_Metahumanos.getModel();
+        
+        DefaultListModel modeloVAtrapar
+                = (DefaultListModel) L_Villanos_Atrapar.getModel();
 
         DefaultListModel modeloSuperpoderes
                 = (DefaultListModel) L_Superpoderes_Villanos.getModel();
@@ -726,6 +847,9 @@ public class LogIn extends javax.swing.JFrame {
             
             //Agregar a la JList Villanos (Metahumanos)
             modeloVMetahumanos.addElement(villain);
+            
+            //Agregar a la JList Villanos (Atrapar)
+            modeloVAtrapar.addElement(villain);
 
             //Agregar a su equipo
             if (CB_Equipo_Villano.getSelectedItem().equals("Dark Avengers")) {
@@ -787,15 +911,22 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> CB_Mortal_Superpoderes;
     private javax.swing.JComboBox<String> CB_PowerLevel_Superpoderes;
     private javax.swing.JDialog D_SimuladorMHA;
+    private javax.swing.JList<String> L_Carcel_Atrapar;
+    private javax.swing.JList<String> L_Superheroes_Atrapar;
     private javax.swing.JList<String> L_Superheroes_Metahumanos;
     private javax.swing.JList<String> L_Superheroes_Superheroes;
     private javax.swing.JList<String> L_Superpoderes_Superheroes;
     private javax.swing.JList<String> L_Superpoderes_Superpoderes;
     private javax.swing.JList<String> L_Superpoderes_Villanos;
+    private javax.swing.JList<String> L_Villanos_Atrapar;
     private javax.swing.JList<String> L_Villanos_Metahumanos;
     private javax.swing.JList<String> L_Villanos_Villanos;
     private javax.swing.JPanel P_AgregarSuperpoderes;
+    private javax.swing.JPanel P_AtraparVillanos;
+    private javax.swing.JPanel P_EscapeVillano;
+    private javax.swing.JPanel P_Metahumanos;
     private javax.swing.JPanel P_Superheroes;
+    private javax.swing.JPanel P_Villanos;
     private javax.swing.JTextField TF_Altura_Superheroe;
     private javax.swing.JTextField TF_Altura_Villano;
     private javax.swing.JTextField TF_Descripcion_Superpoderes;
@@ -809,6 +940,7 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JTextField TF_Planeta_Villano;
     private javax.swing.JTextField TF_Usuario;
     private javax.swing.JTabbedPane TP_SimuladorMHA;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -827,6 +959,10 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -834,16 +970,19 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
