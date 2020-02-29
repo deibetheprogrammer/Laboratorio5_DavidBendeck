@@ -104,11 +104,12 @@ public class LogIn extends javax.swing.JFrame {
         jScrollPane11 = new javax.swing.JScrollPane();
         L_Carcel_Atrapar = new javax.swing.JList<>();
         jLabel28 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        B_AtraparVillano = new javax.swing.JButton();
         P_EscapeVillano = new javax.swing.JPanel();
         jScrollPane12 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        L_Carcel_Escape = new javax.swing.JList<>();
         jLabel29 = new javax.swing.JLabel();
+        B_Escape = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         TF_Password = new javax.swing.JTextField();
@@ -525,7 +526,12 @@ public class LogIn extends javax.swing.JFrame {
 
         jLabel28.setText("Carcel");
 
-        jButton1.setText("--->");
+        B_AtraparVillano.setText("--->");
+        B_AtraparVillano.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B_AtraparVillanoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout P_AtraparVillanosLayout = new javax.swing.GroupLayout(P_AtraparVillanos);
         P_AtraparVillanos.setLayout(P_AtraparVillanosLayout);
@@ -545,7 +551,7 @@ public class LogIn extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
-                .addComponent(jButton1)
+                .addComponent(B_AtraparVillano)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85))
@@ -567,17 +573,24 @@ public class LogIn extends javax.swing.JFrame {
                             .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(P_AtraparVillanosLayout.createSequentialGroup()
                         .addGap(143, 143, 143)
-                        .addComponent(jButton1)))
+                        .addComponent(B_AtraparVillano)))
                 .addGap(191, 191, 191))
         );
 
         TP_SimuladorMHA.addTab("Atrapar villanos", P_AtraparVillanos);
 
-        jList1.setModel(new DefaultListModel()
+        L_Carcel_Escape.setModel(new DefaultListModel()
         );
-        jScrollPane12.setViewportView(jList1);
+        jScrollPane12.setViewportView(L_Carcel_Escape);
 
         jLabel29.setText("Seleccione un villano en la carcel");
+
+        B_Escape.setText("Escape");
+        B_Escape.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B_EscapeMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout P_EscapeVillanoLayout = new javax.swing.GroupLayout(P_EscapeVillano);
         P_EscapeVillano.setLayout(P_EscapeVillanoLayout);
@@ -591,7 +604,10 @@ public class LogIn extends javax.swing.JFrame {
                         .addGap(289, 289, 289))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_EscapeVillanoLayout.createSequentialGroup()
                         .addComponent(jLabel29)
-                        .addGap(330, 330, 330))))
+                        .addGap(330, 330, 330))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, P_EscapeVillanoLayout.createSequentialGroup()
+                        .addComponent(B_Escape)
+                        .addGap(398, 398, 398))))
         );
         P_EscapeVillanoLayout.setVerticalGroup(
             P_EscapeVillanoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -600,7 +616,9 @@ public class LogIn extends javax.swing.JFrame {
                 .addComponent(jLabel29)
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addGap(59, 59, 59)
+                .addComponent(B_Escape)
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         TP_SimuladorMHA.addTab("Escape villanos", P_EscapeVillano);
@@ -864,6 +882,64 @@ public class LogIn extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_B_Agregar_VillanoMouseClicked
 
+    private void B_AtraparVillanoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_AtraparVillanoMouseClicked
+        // TODO add your handling code here:
+        
+        DefaultListModel modeloSuperheroe
+                = (DefaultListModel) L_Superheroes_Atrapar.getModel();
+        
+        DefaultListModel modeloVillano
+                = (DefaultListModel) L_Villanos_Atrapar.getModel();
+        
+        DefaultListModel modeloCarcelAtrapar
+                = (DefaultListModel) L_Carcel_Atrapar.getModel();
+        
+        DefaultListModel modeloCarcelEscape
+                = (DefaultListModel) L_Carcel_Escape.getModel();
+        
+        //Agregar villanos atrapados
+        Superheroe superheroe;
+        superheroe =
+                (Superheroe) modeloSuperheroe.get(
+                L_Superheroes_Atrapar.getSelectedIndex());
+        
+        for (Superheroe heroe : xMen) {
+            if (heroe.equals(superheroe)) {
+                heroe.setVillanosAtrapados(superheroe.getVillanosAtrapados() + 1);
+            }
+        }
+        
+        for (Superheroe heroe : avengers) {
+            if (heroe.equals(superheroe)) {
+                heroe.setVillanosAtrapados(superheroe.getVillanosAtrapados() + 1);
+            }
+        }
+        superheroe.setVillanosAtrapados(superheroe.getVillanosAtrapados() + 1);
+        
+        //Meter villano a la carcel
+        Villano villano;
+        villano =
+                (Villano) modeloVillano.get(
+                L_Villanos_Atrapar.getSelectedIndex());
+        
+        modeloCarcelAtrapar.addElement(villano);
+        modeloCarcelEscape.addElement(villano);
+    }//GEN-LAST:event_B_AtraparVillanoMouseClicked
+
+    private void B_EscapeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B_EscapeMouseClicked
+        // TODO add your handling code here:
+        
+        DefaultListModel modeloCarcelAtrapar
+                = (DefaultListModel) L_Carcel_Atrapar.getModel();
+        
+        DefaultListModel modeloCarcelEscape
+                = (DefaultListModel) L_Carcel_Escape.getModel();
+        
+        modeloCarcelEscape.remove(L_Carcel_Escape.getSelectedIndex());
+        modeloCarcelAtrapar.remove(L_Carcel_Escape.getSelectedIndex());
+        
+    }//GEN-LAST:event_B_EscapeMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -905,13 +981,16 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JButton B_Agregar_Superheroe;
     private javax.swing.JButton B_Agregar_Superpoderes;
     private javax.swing.JButton B_Agregar_Villano;
+    private javax.swing.JButton B_AtraparVillano;
     private javax.swing.JButton B_Entrar;
+    private javax.swing.JButton B_Escape;
     private javax.swing.JComboBox<String> CB_Equipo_Superheroe;
     private javax.swing.JComboBox<String> CB_Equipo_Villano;
     private javax.swing.JComboBox<String> CB_Mortal_Superpoderes;
     private javax.swing.JComboBox<String> CB_PowerLevel_Superpoderes;
     private javax.swing.JDialog D_SimuladorMHA;
     private javax.swing.JList<String> L_Carcel_Atrapar;
+    private javax.swing.JList<String> L_Carcel_Escape;
     private javax.swing.JList<String> L_Superheroes_Atrapar;
     private javax.swing.JList<String> L_Superheroes_Metahumanos;
     private javax.swing.JList<String> L_Superheroes_Superheroes;
@@ -940,7 +1019,6 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JTextField TF_Planeta_Villano;
     private javax.swing.JTextField TF_Usuario;
     private javax.swing.JTabbedPane TP_SimuladorMHA;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -970,7 +1048,6 @@ public class LogIn extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
